@@ -13,10 +13,10 @@ body {
 	color: #63707e;
 }
 .container {
-		width: 90%;
-		margin: auto;
-		max-width: 1300px;
-		background-color: #f2f6f5;
+	width: 90%;
+	margin: auto;
+	max-width: 1300px;
+	background-color: #f2f6f5;
 }
 .clearfix:after {
 	content: "";
@@ -57,24 +57,37 @@ header h1 {
 .col1, .col2, .col3, .col4 {
 	float: left;
 	width: 50%;
+	height: 650px;
 }
-button {
+section {
+	position: relative;
+}
+section img {
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	opacity: .5;
+	position: absolute;
+	background-repeat: no-repeat;
+}
+section button {
   background-color: grey; /*background image*/ 
   border: none;
   color: white;
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   opacity: 0.5;
   transition: 0.3s;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
   width: 100%;
-  padding: 40%;
+  height: 100%;
 }
-button:hover {
-	opacity: 1
+section button:hover {
+	opacity: 0;
 }
+
 /*Footer Styles*/
 footer {
 	text-align: center;
