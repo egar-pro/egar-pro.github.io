@@ -85,7 +85,7 @@
         </header>
         <div class="cols clearfix">
             <div class="forms_container">
-                <form onsubmit="myFunction()" method="post">
+                <form onsubmit="myFunction()" action="results.html">
                     <h3> Booking Information </h3>
                     <fieldset>
                         <legend>Contact Information:</legend>
@@ -183,7 +183,7 @@
                         <legend>Additional Information:</legend>
                         <textarea id="subject" name="subject" placeholder="Special Request, Feedback, Other Information..." style="height:300px"> </textarea>
                     </fieldset>
-                    <input type="submit" value="Submit">
+                      <input type="submit" id="submit" value="Submit">
                 </form>
                 <script>
                 function myFunction() {

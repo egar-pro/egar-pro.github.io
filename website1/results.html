@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<!-- 
+	Author:     Ethan Gardner
+	Due_Date:   10.16.2019
+	Assignment: My Responsive Tavel Site
+	File:       index.html
+	--> 
+	<title> Travel to Belgium </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+	<link rel="stylesheet" href="styles/print.css" media="print" />
+  </head>
+  <body>
+	<div class="container">
+		<header>
+			<h1> Travel to Belgium </h1>
+			<div class="navbar">
+				<a href="form.html"> Book Now </a>
+				<div class="dropdown">
+					<button class="dropbtn" onclick="myFunction()"> Helpful Tips for Belgium 
+						<i class="fa fa-caret-down"></i> 			<!----> <!--https://www.w3schools.com/howto/howto_js_dropdown.asp-->
+					</button>
+					<div class="dropdown-content" id="dropdown">
+						<a href="https://www.whattowearonvacation.com/destinations/europe/belgium/70-what-to-wear-in-belgium/"> What to Take</a>
+						<a href="https://www.tripadvisor.com/Restaurants-g188644-Brussels.html"> Places to eat in Belgium </a>
+						<a href="https://www.lonelyplanet.com/belgium"> More Information </a>
+					</div>
+				</div>
+				<a href="about.html"> About Belgium </a>
+				<a href="whattotake.html"> What to Take </a>	
+				<a href="index.html"> Home </a>	
+			</div>
+			<div class= "navbarBurger">
+				<i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+				<div class="navbarBurger-content" id="navbarBurger" >
+					<a href="index.html"> Home </a>	
+					<a href="about.html"> About Belgium </a>
+					<a href="whattotake.html"> What to Take </a>
+					<a href="https://www.whattowearonvacation.com/destinations/europe/belgium/70-what-to-wear-in-belgium/"> What to Take</a>
+					<a href="https://www.tripadvisor.com/Restaurants-g188644-Brussels.html"> Places to eat in Belgium </a>
+					<a href="https://www.lonelyplanet.com/belgium"> More Information </a>
+				</div>
+			</div>
+			<script>
+				/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				  document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  	var dropdown = document.getElementById("dropdown");
+					if (dropdown.classList.contains('show')) {
+					  dropdown.classList.remove('show');
+					}
+				  }
+				}
+				
+				/*Hamburger, toggle between hiding and showing the dropdown content*/
+				function myXFunction() {
+				  document.getElementById("navbarBurger").classList.toggle("showX");
+				}
+				
+				window.onclick = function(event){
+				  if(!event.target.matches('.fas fa-bars fa-2x')){
+					var dropdowns = document.getElementsById("navbarBurger");
+					var i;
+					for(i = 0; i < dropdowns.length; i++){
+						var openDropdown = dropdowns[i];
+						if(openDropdown.classList.contains('showX')){
+						  openDropdown.classList.remove('showX');
+						}
+					}
+				  }
+				}
+			</script>
+        </header>
+		<div class="cols clearfix">
+			<div class="contain">
+				<h2>Your form is submitted</h2>
+				<div class="results">
+					<h3>this was your input data:</h3>
+					<script>
+						var formData = location.search;
+						formData = formData.substring(1, formData.length);
+						while (formData.indexOf("+") !== -1) {
+						formData = formData.replace("+", " ");
+						}
+						formData = decodeURIComponent(formData);
+						var formArray = formData.split("&");
+						for (var i = 0; i < formArray.length; i = i + 1) {
+						document.write("<p>" + formArray[i] + "</p>");
+						}
+					</script>
+					<h4>We will contact you for further information!</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>&copy; Travel to Belgium 2019 <a href="mailto:matt@nomadicmatt.com">&#x26AC; Email Us </a><a href="tel:417-111-1111">&#x26AC; 417.111.1111</a></p>
+	</footer>
+   </body>
+</html>
