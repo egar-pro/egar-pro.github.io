@@ -9,10 +9,10 @@
 	--> 
 	<title> Travel to Belgium </title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles/reset.css" media="all" />
 	<link rel="stylesheet" href="styles/styles.css" />
 	<link rel="stylesheet" href="styles/print.css" media="print" />
@@ -22,10 +22,7 @@
 		<header>
 			<h1> Travel to Belgium </h1>
 			<div class="navbar">
-				<a href="index.html"> Home </a>	
-				<a href="about.html"> About Belgium </a>
-				<a href="whattotake.html"> What to Take </a>
-				<a href="https://www.lonelyplanet.com/belgium"> Lonely Planet</a>			
+				<a href="form.html"> Book Now </a>
 				<div class="dropdown">
 					<button class="dropbtn" onclick="myFunction()"> Helpful Tips for Belgium 
 						<i class="fa fa-caret-down"></i> 			<!----> <!--https://www.w3schools.com/howto/howto_js_dropdown.asp-->
@@ -36,6 +33,9 @@
 						<a href="https://www.lonelyplanet.com/belgium"> More Information </a>
 					</div>
 				</div>
+				<a href="about.html"> About Belgium </a>
+				<a href="whattotake.html"> What to Take </a>	
+				<a href="index.html"> Home </a>	
 			</div>
 			<div class= "navbarBurger">
 				<i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
@@ -57,7 +57,7 @@
 				// Close the dropdown if the user clicks outside of it
 				window.onclick = function(e) {
 				  if (!e.target.matches('.dropbtn')) {
-				  var dropdown = document.getElementById("dropdown");
+				  	var dropdown = document.getElementById("dropdown");
 					if (dropdown.classList.contains('show')) {
 					  dropdown.classList.remove('show');
 					}
