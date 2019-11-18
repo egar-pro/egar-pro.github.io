@@ -1,0 +1,45 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    perspective: 300vmin;
+    background-color: #f0dab1;
+}
+.beach {
+    height: 30%;
+    margin: 0;
+    top: 0px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f6edcf, #f0dab1);
+
+}
+.ocean { 
+    height: 80%;
+    margin: 0;
+    overflow: hidden;
+    bottom: 0px;
+    background: linear-gradient(to bottom, #daf1f9 , #a4d7e1);
+    border-radius: 50% / 10% ;
+
+
+}
+.fin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateX(-20deg) rotateY(40deg);
+    transform-style: preserve-3d;
+    font-size: 25vmin;
+    animation: spin 6s linear infinite;
+}
+@keyframes spin {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
