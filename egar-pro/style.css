@@ -15,31 +15,67 @@ body {
     overflow: hidden;
     background: linear-gradient(to bottom, #f6edcf, #f0dab1);
 
+
 }
 .ocean { 
-    height: 80%;
+    height: 40%;
     margin: 0;
     overflow: hidden;
-    bottom: 0px;
-    background: linear-gradient(to bottom, #daf1f9 , #a4d7e1);
+    background: linear-gradient(to bottom, #b5e9fa , #00d5ff);
     border-radius: 50% / 10% ;
-
-
+    animation: waves 6s infinite;
+}
+.ocean2 {
+    overflow: hidden;
+    margin: 0;
+    height: 30%;
+    background-color: #00d5ff;
 }
 .fin {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: rotateX(-20deg) rotateY(40deg);
-    transform-style: preserve-3d;
-    font-size: 25vmin;
-    animation: spin 6s linear infinite;
+    top: 60%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 50%/ 10%;
+    border-bottom: 100px solid rgb(81, 95, 114);
+    animation: shark 8s linear infinite;
 }
-@keyframes spin {
+img {
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    width: 150px;
+    height: 150px;
+}
+@keyframes waves {
     0% {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform: scaleY(1.2);
+    }
+    50% {
+        transform: scaleY(1.7);
     }
     100% {
-      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        transform: scaleY(1.2);
+    }
+}
+@keyframes shark {
+    0% {
+        transform: rotate(0deg) translateX(200px) rotate(0deg) scaleX(.2);
+        
+    }
+    25% {
+        transform: rotate(90deg) translateX(200px) rotate(-90deg) scaleX(.7);
+    }
+    50% {
+        transform: rotate(180deg) translateX(200px) rotate(-180deg) scaleX(.2);
+    }
+    75% {
+        transform: rotate(270deg) translateX(200px) rotate(-270deg) scaleX(-.7);
+    }
+    100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg) scaleX(.2);
     }
 }
