@@ -1,0 +1,79 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    perspective: 300vmin;
+    background-color: #f0dab1;
+}
+.beach {
+    height: 30%;
+    margin: 0;
+    top: 0px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f6edcf, #f0dab1);
+
+}
+.ocean { 
+    height: 40%;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #b5e9fa , #00d5ff);
+    border-radius: 50% / 10% ;
+    animation: waves 6s infinite;
+}
+.ocean2 {
+    overflow: hidden;
+    margin: 0;
+    height: 30%;
+    background-color: #00d5ff;
+}
+.fin {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 50px solid transparent;
+    border-radius: 50%/ 10%;
+    border-bottom: 100px solid rgb(81, 95, 114);
+    animation: shark 8s linear infinite;
+}
+img {
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    width: 150px;
+    height: 150px;
+}
+@keyframes waves {
+    0% {
+        transform: scaleY(1.2);
+    }
+    50% {
+        transform: scaleY(1.7);
+    }
+    100% {
+        transform: scaleY(1.2);
+    }
+}
+@keyframes shark {
+    0% {
+        transform: rotate(0deg) translateX(200px) rotate(0deg) scaleX(.2);
+    }
+    25% {
+        transform: rotate(90deg) translateX(200px) rotate(-90deg) scaleX(.7);
+    }
+    50% {
+        transform: rotate(180deg) translateX(200px) rotate(-180deg) scaleX(.2);
+    }
+    75% {
+        transform: rotate(270deg) translateX(200px) rotate(-270deg) scaleX(-.7);
+    }
+    100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg) scaleX(.2);
+    }
+}

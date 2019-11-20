@@ -1,0 +1,31 @@
+/*
+	Author:      Ethan Gardner
+	Due_Date:    11.19.2019
+	Assignment:  Toto's Training Tutorials
+	File:        print.css
+*/
+/* Hidden Objects */
+
+header h1 {
+	font-size: 3em;
+	padding: none;
+	margin: none;
+}
+.navbar, footer {
+	display: none;
+}
+
+
+/* Formatting */
+
+body {
+	color: black;
+}
+
+img.img1, img.img2, img.img3 {
+	min-width: 2in;
+}
+
+@page {
+	margin: 0.5cm;
+}

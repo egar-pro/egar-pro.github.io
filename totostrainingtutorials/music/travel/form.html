@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<!-- 
+	Author:     Ethan Gardner
+	Due_Date:   10.16.2019
+	Assignment: My Responsive Tavel Site
+	File:       form.html
+	--> 
+	<title> Travel to Belgium </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/reset.css" media="all" />
+	<link rel="stylesheet" href="styles/styles.css" />
+	<link rel="stylesheet" href="styles/print.css" media="print" />
+  </head>
+  <body>
+	<div class="container">
+		<header>
+			<h1> Travel to Belgium </h1>
+			<div class="navbar">
+				<a href="form.html"> Book Now </a>
+				<a href="about.html"> About Belgium </a>
+				<a href="whattotake.html"> What to Take </a>	
+				<a href="index.html"> Home </a>	
+			</div>
+			<div class= "navbarBurger">
+				<i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+				<div class="navbarBurger-content" id="navbarBurger" >
+					<a href="index.html"> Home </a>	
+					<a href="about.html"> About Belgium </a>
+					<a href="whattotake.html"> What to Take </a>
+					<a href="https://www.whattowearonvacation.com/destinations/europe/belgium/70-what-to-wear-in-belgium/"> What to Take</a>
+					<a href="https://www.tripadvisor.com/Restaurants-g188644-Brussels.html"> Places to eat in Belgium </a>
+					<a href="https://www.lonelyplanet.com/belgium"> More Information </a>
+				</div>
+			</div>
+			<script>
+				/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				  document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(e) {
+				  if (!e.target.matches('.dropbtn')) {
+				  	var dropdown = document.getElementById("dropdown");
+					if (dropdown.classList.contains('show')) {
+					  dropdown.classList.remove('show');
+					}
+				  }
+				}
+				
+				/*Hamburger, toggle between hiding and showing the dropdown content*/
+				function myXFunction() {
+				  document.getElementById("navbarBurger").classList.toggle("showX");
+				}
+				
+				window.onclick = function(event){
+				  if(!event.target.matches('.fas fa-bars fa-2x')){
+					var dropdowns = document.getElementsById("navbarBurger");
+					var i;
+					for(i = 0; i < dropdowns.length; i++){
+						var openDropdown = dropdowns[i];
+						if(openDropdown.classList.contains('showX')){
+						  openDropdown.classList.remove('showX');
+						}
+					}
+				  }
+				}
+			</script>
+        </header>
+        <div class="cols clearfix">
+            <div class="forms_container">
+                <form onsubmit="myFunction()" action="results.html">
+                    <h3> Booking Information </h3>
+                    <fieldset>
+                        <legend>Contact Information:</legend>
+                        First Name: 
+                        <input type="text" name="firstname" placeholder="FirstName" required>
+                        Last Name: 
+                        <input type="text" name="lastname" placeholder="LastName" required><br>
+                        Email: 
+                        <input type="email" name="email" placeholder="emailaddress@email.com" required>
+                        Phone Number:
+                        <input type="tel" name="tel" placeholder="(xxx)-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Travel Information:</legend>
+                        <fieldset> 
+                            <legend>Which Location Would You Like to Travel?</legend>
+                            <label class="radioText"> Brussels, Belgium 
+                                <input type="radio" name="location" value="brussels" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radioText"> Ghent, Belgium
+                                <input type="radio" name="location" value="ghent">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radioText"> Antwerp, Belgium
+                                <input type="radio" name="location" value="antwerp"> 
+                                <span class="checkmark"></span>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Scheduled Dates:</legend>
+                            Month: 
+                            <select name="month" required> 
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
+                            </select>
+                            Day:
+                            <select name="day" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <br>Year: 
+                            <input type="number" name="year" min="2019" required>
+                            Number of Nights:
+                            <input type="number" name="nights" min="1" required>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Travelers:</legend>
+                            Adults (Aged 18+): 
+                            <input type="number" name="adults" min="1" required>
+                            Children (0-17): 
+                            <input type="number" name="children" min="0" required>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Additional Information:</legend>
+                        <textarea id="subject" name="subject" placeholder="Special Request, Feedback, Other Information..." style="height:300px"> </textarea>
+                    </fieldset>
+                      <input type="submit" id="submit" value="Submit">
+                </form>
+                <script>
+                function myFunction() {
+                    alert("Success!");
+                }
+                </script> 
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Travel to Belgium 2019 <a href="mailto:matt@nomadicmatt.com">&#x26AC; Email Us </a><a href="tel:417-111-1111">&#x26AC; 417.111.1111</a></p>
+    </footer>
+   </body>
+</html>
