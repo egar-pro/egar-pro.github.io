@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 
+            Author: Ethan Gardner
+            File: index.html
+            Date: 11.19.2019
+            Project: Toto's Training Tutorials
+        -->
+        <title> Training Birds </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet"> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="styles/reset.css" media="all" />
+        <link rel="stylesheet" href="Styles/styles.css" />
+        <link rel="stylesheet" href="Styles/captions.css" />
+        <link rel="stylesheet" href="Styles/print.css" media="print" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="topArea"></div>
+                <div class="headerImg">               
+                    <img src="images/bird.jpg" alt="bird">
+                    <div class="imageText">
+                        <h1> Pet Birds </h1>
+                        <h3> The Best Pet to Have! </h3>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <a href="index.html"> Home </a>
+                    <a href="tutorials.html"> Training Videos </a>
+                </div>
+                <div class= "navbarBurger">
+                    <i class="fas fa-bars fa-2x" onclick="myXFunction()"></i>
+                    <div class="navbarBurger-content" id="navbarBurger" >
+                        <a href="index.html"> Home </a>
+                        <a href="tutorials.html"> Training Videos </a>        
+                    </div>
+                </div>
+                <script>
+                    /*Hamburger, toggle between hiding and showing the dropdown content*/
+                    function myXFunction() {
+                        document.getElementById("navbarBurger").classList.toggle("showX");
+                    }
+                    
+                    window.onclick = function(event){
+                        if(!event.target.matches('.fas fa-bars fa-2x')){
+                        var dropdowns = document.getElementsById("navbarBurger");
+                        var i;
+                        for(i = 0; i < dropdowns.length; i++){
+                            var openDropdown = dropdowns[i];
+                            if(openDropdown.classList.contains('showX')){
+                                openDropdown.classList.remove('showX');
+                            }
+                        }
+                        }
+                    }
+                </script>
+            </header>
+            <div class="columns">
+                <section class="content">
+                    <h2> Why You Should Get a Pet Bird: </h2>
+                    <p> It's no surprise that many people want a pet bird that is friendly, gentle, 
+                    and well-suited to being a companion. These traits are even more important for people 
+                    with limited pet bird experience. It's easier to bond with and care for an animal that has a 
+                    naturally friendly disposition, rather than one that tends to be timid or aggressive. </p>
+                </section>
+            </div>
+            <div class="columns">
+                <h2> Best Pet Bird Species to Train: </h2>
+                <section class="col1">
+                    <img class="img1" src="images/Budgerigar.jpg" alt="Budgerigar"/>
+                    <h2> Budgerigar </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                </section>
+                <section class="col2">
+                    <img class="img2" src="images/Cockatiel.jpg" alt="Cockatiel"/>
+                    <h2>Cockatiel</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                </section>
+                <section class="col3">
+                    <img class="img3" src="images/Cockatoo.jpg" alt="Cockatoo"/>
+                    <h2>Cockatoo</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                </section>
+                <section class="col4">
+                    <img class="img4" src="images/HyacinthMacaw.jpg" alt="Hyacinth Macaw"/>
+                    <h2>Hyacinth Macaw</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                </section>
+            </div>
+            <div class="columns">
+                <h2> More of A Reason Why You Should Have A Pet Bird: </h2>
+                <iframe width="1000" height="500" src="https://www.youtube.com/embed/RmZaR5kMpGk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="columns">
+                <p> Bird Music: </p>
+                <audio controls autoplay>
+                    <source src="music/Bird-music.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <footer> 
+            <p> &copy; eg0909402 <a href="mailto:eg0909402@otc.edu">&#x26AC; eg0909402@otc.edu </a></p>
+        </footer>
+    </body>
+</html>
